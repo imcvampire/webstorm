@@ -5,5 +5,18 @@
     <option name="PATTERN_ANNOTATION" value="org.intellij.lang.annotations.Pattern" />
     <option name="SUBST_ANNOTATION" value="org.intellij.lang.annotations.Subst" />
     <option name="RESOLVE_REFERENCES" value="true" />
+    <injection language="JSX Harmony" injector-id="xml">
+      <display-name>*/@href</display-name>
+      <value-pattern>^javascript:(.+)</value-pattern>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("href")).withParent(xmlTag().withNamespace(string().equalTo("http://www.w3.org/1999/xhtml")))]]></place>
+    </injection>
+    <injection language="JSX Harmony" injector-id="xml">
+      <display-name>*/@on.*</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().matches("<none>"))]]></place>
+    </injection>
+    <injection language="JSX Harmony" injector-id="xml">
+      <display-name>script</display-name>
+      <place><![CDATA[xmlTag().withLocalName(string().equalTo("script")).withNamespace(string().equalTo("http://www.w3.org/1999/xhtml"))]]></place>
+    </injection>
   </component>
 </application>
