@@ -544,6 +544,7 @@
       <value>
         <option name="FOREGROUND" value="ffffff" />
         <option name="BACKGROUND" value="d3423e" />
+        <option name="ERROR_STRIPE_COLOR" value="d3423e" />
         <option name="EFFECT_TYPE" value="3" />
       </value>
     </option>
@@ -587,6 +588,7 @@
     <option name="ERRORS_ATTRIBUTES">
       <value>
         <option name="EFFECT_COLOR" value="722c40" />
+        <option name="ERROR_STRIPE_COLOR" value="722c40" />
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
