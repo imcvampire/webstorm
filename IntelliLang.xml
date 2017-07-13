@@ -1,10 +1,5 @@
 <application>
   <component name="LanguageInjectionConfiguration">
-    <option name="INSTRUMENTATION" value="ASSERT" />
-    <option name="LANGUAGE_ANNOTATION" value="org.intellij.lang.annotations.Language" />
-    <option name="PATTERN_ANNOTATION" value="org.intellij.lang.annotations.Pattern" />
-    <option name="SUBST_ANNOTATION" value="org.intellij.lang.annotations.Subst" />
-    <option name="RESOLVE_REFERENCES" value="true" />
     <injection language="JSX Harmony" injector-id="xml">
       <display-name>*/@href</display-name>
       <value-pattern>^javascript:(.+)</value-pattern>
@@ -20,6 +15,10 @@
       <suffix>}</suffix>
       <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("style")).inside(xmlTag().withNamespace(string().equalTo("http://www.w3.org/1999/xhtml")))]]></place>
       <apply-to-subtags />
+    </injection>
+    <injection language="Vue" injector-id="xml">
+      <display-name>input/@placeholder</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("placeholder")).withParent(xmlTag().withLocalName(string().equalTo("input")).withNamespace(string().equalTo("http://www.w3.org/1999/xhtml")))]]></place>
     </injection>
     <injection language="JSX Harmony" injector-id="xml">
       <display-name>script</display-name>
